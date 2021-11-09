@@ -1,0 +1,83 @@
+body {
+    background-size: 400% 400%;
+    -webkit-animation: gradientBackground 10s ease infinite;
+    animation: gradientBackground 10s ease infinite;
+}
+
+.generator {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.pwgen-form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    border-radius: 10px;
+    max-width: 360px;
+    margin: 0 auto 10px;
+    padding: 45px;
+    text-align: center;
+}
+
+.form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form input:hover {
+    background: #f7f7f7;
+}
+
+.form button {
+    outline: 0;
+    background: #4b517f;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.form button:active {
+    background: #1f223a;
+}
+
+.form button:hover {
+    background: #717a9e;
+}
+
+@-webkit-keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
