@@ -4,11 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Events\EmailProcessed;
 use App\Models\Email;
-use App\Models\User;
 use App\Traits\SetResponse;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Event;
 
 class EmailController extends Controller
 {
