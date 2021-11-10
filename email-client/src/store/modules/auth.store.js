@@ -44,7 +44,7 @@ export const AuthStore = {
             if (response.data.error === false) {
                 await commit('setUser', response.data.data.user);
                 await commit('setUserToken', response.data.data.token);
-                router.push("/inbox");
+                router.push("/");
             }else{
                 router.push("/login");
             }

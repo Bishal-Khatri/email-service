@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/register', [\App\Http\Controllers\AuthController::class, 'register']);
 Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login']);
 Route::group(['middleware'=> 'auth:sanctum'], function (){
-    Route::get('/emails', [\App\Http\Controllers\EmailController::class, 'index']);
+    Route::get('/inbox', [\App\Http\Controllers\EmailController::class, 'inbox']);
     Route::get('/logout', [\App\Http\Controllers\AuthController::class, 'logout']);
 });
+Route::post('/email/send', [\App\Http\Controllers\EmailController::class, 'send']);

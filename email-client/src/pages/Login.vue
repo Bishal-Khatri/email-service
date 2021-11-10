@@ -29,6 +29,9 @@
                 showError: false
             };
         },
+        mounted(){
+
+        },
         methods: {
             ...mapActions('auth',['LogIn']),
             async login() {
