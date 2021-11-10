@@ -1,23 +1,30 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import store from "./store";
-import Inbox from "./pages/Inbox";
+import Outbox from "./pages/Outbox";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Compose from "./pages/Compose";
 
 Vue.use(VueRouter);
 
 const routes = [
     {
-        path: "/inbox",
-        name: "Inbox",
-        component: Inbox,
+        path: "/compose",
+        name: "Compose",
+        component: Compose,
+        meta: { requiresAuth: true },
+    },
+    {
+        path: "/outbox",
+        name: "Outbox",
+        component: Outbox,
         meta: { requiresAuth: true },
     },
     {
         path: "/",
         name: "Home",
-        component: Inbox,
+        component: Outbox,
         meta: { requiresAuth: true },
     },
     {
